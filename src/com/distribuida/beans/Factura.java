@@ -16,7 +16,7 @@ public class Factura {
 
     private Cliente cliente;
 
-    public Factura(int idFactura, String numFactura, Date fecha, Double totalNeto, Double iva, Double total, Cliente cliente) {
+    public Factura() {
         this.idFactura = idFactura;
         this.numFactura = numFactura;
         this.fecha = fecha;
@@ -26,7 +26,7 @@ public class Factura {
         this.cliente = cliente;
     }
 
-    public Factura(){
+    public Factura(int idFactura, String numFactura, Date fecha, double totalNeto, double iva, double total, int i){
 
 
     }
