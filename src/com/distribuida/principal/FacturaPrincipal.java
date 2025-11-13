@@ -11,7 +11,8 @@ public class FacturaPrincipal {
 
         Cliente cliente = new Cliente(1, "1754421483", "Juan", "Taip", "Av. por ahi", "099182457","hola@goo.edu.ec");
 
-        Factura factura =new Factura();
+
+        Factura factura =new Factura(1,"FAC-0001",new Date(),100.100,15.00,15.00,1);
 
         factura.setIdFactura(1);
         factura.setNumFactura("FAC-0001");
