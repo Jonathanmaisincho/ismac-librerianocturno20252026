@@ -7,14 +7,14 @@ public class Autor {
     private String apellido;
     private String pais;
     private String direccion;
-    private int telefono;
+    private String telefono;
     private String correo;
 
     public Autor(){
 
     }
 
-    public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, int telefono, String correo) {
+    public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono, String correo) {
         this.idAutor = idAutor;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -64,11 +64,11 @@ public class Autor {
         this.direccion = direccion;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
