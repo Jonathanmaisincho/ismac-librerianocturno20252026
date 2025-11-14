@@ -10,7 +10,7 @@ public class Libro {
     private int numpaginas;
     private String edicion;
     private String idioma;
-    private Date fechapublicacion;
+    private String fechapublicacion;
     private String descripcion;
     private String tipodepasta;
     private String ISBN;
@@ -27,7 +27,7 @@ public class Libro {
 
     }
 
-    public Libro(int idLibro, String titulo, String editorial, int numpaginas, String edicion, String idioma, Date fechapublicacion, String descripcion, String tipodepasta, String ISBN, int numejemplares, String portada, String presentacion, Double precio, Categoria categoria, Autor autor) {
+    public Libro(int idLibro, String titulo, String editorial, int numpaginas, String edicion, String idioma, String fechapublicacion, String descripcion, String tipodepasta, String ISBN, int numejemplares, String portada, String presentacion, Double precio, Categoria categoria, Autor autor) {
         this.idLibro = idLibro;
         this.titulo = titulo;
         this.editorial = editorial;
@@ -94,11 +94,11 @@ public class Libro {
         this.idioma = idioma;
     }
 
-    public Date getFechapublicacion() {
+    public String getFechapublicacion() {
         return fechapublicacion;
     }
 
-    public void setFechapublicacion(Date fechapublicacion) {
+    public void setFechapublicacion(String fechapublicacion) {
         this.fechapublicacion = fechapublicacion;
     }
 
@@ -194,5 +194,8 @@ public class Libro {
                 ", categoria=" + categoria +
                 ", autor=" + autor +
                 '}';
+    }
+
+    public void setLibro(Libro libro) {
     }
 }
