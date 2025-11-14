@@ -17,6 +17,8 @@ public class AutorPrincipal {
         autor.setTelefono("0984562879");
         autor.setCorreo("lucia.garcia.montes@example.com");
 
+        // inyecion de dependencias
+
         System.out.println(autor.toString());
     }
 
