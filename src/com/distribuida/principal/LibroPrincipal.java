@@ -9,7 +9,7 @@ public class LibroPrincipal {
 
     public static void main(String[] arg){
 
-        Libro libro = new Libro();
+        Libro libro = new Libro(1, "La Sombra de los Vientos Eternos", "Aurora", 432, "1ª edición", "Español", "2023-09-15 00:00:00", "Una novela fantástica que narra la aventura de un joven destinado a proteger un antiguo secreto", "Tapa dura", "978-1-23456-789-7", 25, "portadas/sombra_vientos.jpg", "Libro de lujo con sobrecubierta", 349.99);
 
         libro.setIdLibro(1);
         libro.setTitulo("La Sombra de los Vientos Eternos");
@@ -37,7 +37,6 @@ public class LibroPrincipal {
 
         libro.setCategoria(categoria);
         libro.setAutor(autor);
-
 
         System.out.println(libro.toString());
         System.out.println(categoria.toString());

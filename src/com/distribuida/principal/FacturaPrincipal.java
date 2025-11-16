@@ -14,14 +14,9 @@ public class FacturaPrincipal {
 
         Factura factura =new Factura(1,"FAC-0001",new Date(),100.100,15.00,15.00,1);
 
-        factura.setIdFactura(1);
-        factura.setNumFactura("FAC-0001");
-        factura.setFecha( new Date());
-        factura.setTotalNeto(100.100);
-        factura.setIva(15.00);
-        factura.setTotal(115.00);
 
        // inyecion de dependencias
+
         factura.setCliente(cliente);
 
         System.out.println(factura.toString());

@@ -1,7 +1,5 @@
 package com.distribuida.beans;
 
-import java.util.Date;
-
 public class Libro {
 
     private int idLibro;
@@ -23,7 +21,7 @@ public class Libro {
     private Categoria categoria;
     private Autor autor;
 
-    public Libro(){
+    public Libro(int i, String s, String aurora, int i1, String string, String español, String s1, String string1, String tapaDura, String s2, int i2, String string2, String libroDeLujoConSobrecubierta, double v){
 
     }
 

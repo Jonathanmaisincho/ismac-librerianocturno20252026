@@ -13,7 +13,7 @@ public class Autor {
     public Autor(){
 
     }
-
+// CONSTRUCTOR
     public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono, String correo) {
         this.idAutor = idAutor;
         this.nombre = nombre;
@@ -23,6 +23,8 @@ public class Autor {
         this.telefono = telefono;
         this.correo = correo;
     }
+
+    // Getter and Setter
 
     public int getIdAutor() {
         return idAutor;
@@ -80,6 +82,8 @@ public class Autor {
         this.correo = correo;
     }
 
+
+    // toString()
     @Override
     public String toString() {
         return "Autor{" +
