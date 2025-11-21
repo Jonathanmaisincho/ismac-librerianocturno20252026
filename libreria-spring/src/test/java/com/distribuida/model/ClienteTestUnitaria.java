@@ -3,8 +3,7 @@ package com.distribuida.model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ClienteTestUnitaria {
 
@@ -21,7 +20,7 @@ public class ClienteTestUnitaria {
         assertAll("validar datos cliente - Constructor",
                 () -> assertEquals(1, cliente.getIdCliente()),
                 () -> assertEquals("1754421483", cliente.getCedula()),
-                () -> assertEquals("Juan", cliente.getNomnbre()),
+                () -> assertEquals("Juan", cliente.getNombre()),
                 () -> assertEquals("Taipe", cliente.getApellido()),
                 () -> assertEquals("Direccion1", cliente.getDireccion()),
                 () -> assertEquals("0991801937", cliente.getTelefono()),
@@ -35,7 +34,7 @@ public class ClienteTestUnitaria {
 
         cliente.setIdCliente(2);
         cliente.setCedula("1754421482");
-        cliente.setNomnbre("Juan2");
+        cliente.setNombre("Juan2");
         cliente.setApellido("Taipe2");
         cliente.setDireccion("Direccion2");
         cliente.setTelefono("0998521453");
@@ -44,7 +43,7 @@ public class ClienteTestUnitaria {
         assertAll("validar datos cliente - Setters",
                 () -> assertEquals(2, cliente.getIdCliente()),
                 () -> assertEquals("1754421482", cliente.getCedula()),
-                () -> assertEquals("Juan2", cliente.getNomnbre()),
+                () -> assertEquals("Juan2", cliente.getNombre()),
                 () -> assertEquals("Taipe2", cliente.getApellido()),
                 () -> assertEquals("Direccion2", cliente.getDireccion()),
                 () -> assertEquals("0998521453", cliente.getTelefono()),
@@ -55,7 +54,20 @@ public class ClienteTestUnitaria {
 
     }
 
+    @Test
+    public void clienteTestToString(){
+        String str = cliente.toString();
+        assertAll("Validar datos cliente - To String",
+        ()-> assertTrue(str.contains("1")),
+        ()-> assertTrue(str.contains("1754421483")),
+        ()-> assertTrue(str.contains("Juan")),
+        ()-> assertTrue(str.contains("Taipe")),
+        ()-> assertTrue(str.contains("Direccion1")),
+        ()-> assertTrue(str.contains("0991801937")),
+        ()-> assertTrue(str.contains("jtaipe@correo.com"))
+    );
     }
+ }
 
 
 

@@ -4,7 +4,7 @@ public class Cliente {
 //atributos
     private int idCliente;
     private String cedula;
-    private String nomnbre;
+    private String nombre;
     private String apellido;
     private String direccion;
     private String telefono;
@@ -13,10 +13,10 @@ public class Cliente {
     // constructores
     public Cliente ( ){ }
 
-    public Cliente(int idCliente, String cedula, String nomnbre, String apellido, String direccion, String telefono, String correo) {
+    public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo) {
         this.idCliente = idCliente;
         this.cedula = cedula;
-        this.nomnbre = nomnbre;
+        this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
@@ -24,6 +24,7 @@ public class Cliente {
     }
 
     // getters and setters
+
 
     public int getIdCliente() {
         return idCliente;
@@ -41,12 +42,12 @@ public class Cliente {
         this.cedula = cedula;
     }
 
-    public String getNomnbre() {
-        return nomnbre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNomnbre(String nomnbre) {
-        this.nomnbre = nomnbre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellido() {
@@ -86,7 +87,7 @@ public class Cliente {
         return "Cliente{" +
                 "idCliente=" + idCliente +
                 ", cedula='" + cedula + '\'' +
-                ", nomnbre='" + nomnbre + '\'' +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
