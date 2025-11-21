@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
-import static org.assertj.core.api.AbstractSoftAssertions.assertAll;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class FacturaTestUnitaria {
 
@@ -40,7 +40,7 @@ public class FacturaTestUnitaria {
                 () -> assertEquals(100.00, factura.getTotalNeto()),
                 () -> assertEquals(15.00, factura.getIva()),
                 () -> assertEquals(115.00, factura.getTotal()),
-                () -> assertEquals("Juan", factura.getCliente().getNombre()),
+                () -> assertEquals("Juan", factura.getCliente().getNombre())
         );
     }
 
@@ -60,7 +60,7 @@ public class FacturaTestUnitaria {
 
         factura.setCliente(cliente);
 
-        assertAll("Validad Setters - Factura",
+        assertAll("Validar Setters - Factura",
                 () -> assertEquals(2, factura.getIdFactura()),
                 () -> assertEquals("FAC-0002", factura.getNumFactura()),
 
@@ -68,7 +68,7 @@ public class FacturaTestUnitaria {
                 () -> assertEquals(200.00, factura.getTotalNeto()),
                 () -> assertEquals(30.00, factura.getIva()),
                 () -> assertEquals(230.00, factura.getTotal()),
-                () -> assertEquals("Juan2", factura.getCliente().getNombre()),
+                () -> assertEquals("Juan2", factura.getCliente().getNombre())
 
         );
     }
@@ -82,7 +82,7 @@ public class FacturaTestUnitaria {
                 () -> assertTrue(str.contains("100.0")),
                 () -> assertTrue(str.contains("15.0")),
                 () -> assertTrue(str.contains("115.0")),
-                () -> assertTrue(str.contains("Juan")),
+                () -> assertTrue(str.contains("Juan"))
         );
     }
 
@@ -90,7 +90,7 @@ public class FacturaTestUnitaria {
     public void facturaTestInyector(){
         assertAll("Validar metodo inyector - Factura",
                 () -> assertNotNull(factura.getCliente()),
-                () -> assertEquals("Taipe", factura.getCliente().getApellido()),
+                () -> assertEquals("Taipe", factura.getCliente().getApellido())
 
 
                 );
@@ -101,7 +101,7 @@ public class FacturaTestUnitaria {
         factura.setTotal(-100.00);
         assertAll("Validar datos Negativos",
                 () -> assertEquals(-100.00, factura.getTotal()),
-                () -> assertEquals(-100.00, factura.getTotal()),
+                () -> assertEquals(-100.00, factura.getTotal())
         );
     }
 }
