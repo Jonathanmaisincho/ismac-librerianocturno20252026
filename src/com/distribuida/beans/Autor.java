@@ -24,7 +24,7 @@ public class Autor {
         this.correo = correo;
     }
 
-    // Getter and Setter
+    // Getter and Setters
 
     public int getIdAutor() {
         return idAutor;
