@@ -25,7 +25,7 @@ public class Libro {
 
     }
 
-    public Libro(int idLibro, String titulo, String editorial, int numpaginas, String edicion, String idioma, String fechapublicacion, String descripcion, String tipodepasta, String ISBN, int numejemplares, String portada, String presentacion, Double precio, Categoria categoria, Autor autor) {
+    public Libro(int idLibro, String titulo, String editorial, int numpaginas, String edicion, String idioma, String fechapublicacion, String descripcion, String tipodepasta, String ISBN, int numejemplares, String portada, String presentacion, Double precio) {
         this.idLibro = idLibro;
         this.titulo = titulo;
         this.editorial = editorial;
@@ -181,7 +181,7 @@ public class Libro {
                 ", numpaginas=" + numpaginas +
                 ", edicion='" + edicion + '\'' +
                 ", idioma='" + idioma + '\'' +
-                ", fechapublicacion=" + fechapublicacion +
+                ", fechapublicacion='" + fechapublicacion + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", tipodepasta='" + tipodepasta + '\'' +
                 ", ISBN='" + ISBN + '\'' +
@@ -193,7 +193,11 @@ public class Libro {
                 ", autor=" + autor +
                 '}';
     }
-
-    public void setLibro(Libro libro) {
-    }
 }
+
+
+
+
+
+
+
