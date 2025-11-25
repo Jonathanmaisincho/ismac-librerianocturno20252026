@@ -15,8 +15,8 @@ public class ClienteTestUnitaria {
         cliente = new Cliente(1, "1754421483", "Juan", "Taipe", "Direccion1", "0991801937", "jtaipe@correo.com");
     }
 
-        @Test
-        public void testClienteConstructor(){
+    @Test
+    public void testClienteConstructor() {
         assertAll("validar datos cliente - Constructor",
                 () -> assertEquals(1, cliente.getIdCliente()),
                 () -> assertEquals("1754421483", cliente.getCedula()),
@@ -26,8 +26,8 @@ public class ClienteTestUnitaria {
                 () -> assertEquals("0991801937", cliente.getTelefono()),
                 () -> assertEquals("jtaipe@correo.com", cliente.getCorreo())
 
-                );
-        }
+        );
+    }
 
     @Test
     public void testClienteSetters() {
@@ -55,19 +55,30 @@ public class ClienteTestUnitaria {
     }
 
     @Test
-    public void clienteTestToString(){
+    public void clienteTestToString() {
         String str = cliente.toString();
         assertAll("Validar datos cliente - To String",
-        ()-> assertTrue(str.contains("1")),
-        ()-> assertTrue(str.contains("1754421483")),
-        ()-> assertTrue(str.contains("Juan")),
-        ()-> assertTrue(str.contains("Taipe")),
-        ()-> assertTrue(str.contains("Direccion1")),
-        ()-> assertTrue(str.contains("0991801937")),
-        ()-> assertTrue(str.contains("jtaipe@correo.com"))
-    );
+                () -> assertTrue(str.contains("1")),
+                () -> assertTrue(str.contains("1754421483")),
+                () -> assertTrue(str.contains("Juan")),
+                () -> assertTrue(str.contains("Taipe")),
+                () -> assertTrue(str.contains("Direccion1")),
+                () -> assertTrue(str.contains("0991801937")),
+                () -> assertTrue(str.contains("jtaipe@correo.com"))
+        );
     }
- }
+
+    @Test
+    public void AutorTestInyector() {
+        assertAll("Validar metodo inyector - autor",
+                () -> assertNotNull(cliente.getIdCliente())
+
+
+        );
+    }
+}
+
+
 
 
 

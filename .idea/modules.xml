@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ejemplo-nocturno.iml" filepath="$PROJECT_DIR$/ejemplo-nocturno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libreria-spring.iml" filepath="$PROJECT_DIR$/.idea/modules/libreria-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libreria-spring.main.iml" filepath="$PROJECT_DIR$/.idea/modules/libreria-spring.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libreria-spring.test.iml" filepath="$PROJECT_DIR$/.idea/modules/libreria-spring.test.iml" />
     </modules>
   </component>
 </project>
