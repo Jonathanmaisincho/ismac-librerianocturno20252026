@@ -76,6 +76,15 @@ public class ClienteTestUnitaria {
 
         );
     }
+
+    @Test
+    public void clienteValoresNegativos() {
+        cliente.setIdCliente(-4);
+        assertAll("Validar datos Negativos",
+                () -> assertEquals(-4, cliente.getIdCliente()),
+                () -> assertEquals(-4, cliente.getIdCliente())
+        );
+    }
 }
 
 

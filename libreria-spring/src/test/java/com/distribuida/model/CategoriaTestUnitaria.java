@@ -43,10 +43,7 @@ public class CategoriaTestUnitaria {
                 () -> assertEquals(2, categoria.getIdCategoria()),
                 () -> assertEquals("Fantasía2", categoria.getCategoria()),
                 () -> assertEquals("Libros que contienen2", categoria.getDescripcion())
-
-
         );
-
     }
 
     @Test
@@ -57,14 +54,24 @@ public class CategoriaTestUnitaria {
                 () -> assertTrue(str.contains("Fantasía")),
                 () -> assertTrue(str.contains("Libros que contienen elementos mágicos, mundos imaginarios o criaturas sobrenaturales"))
 
-                );
+        );
 
     }
+
     @Test
     public void CategoriaTestInyector() {
         assertAll("Validar metodo inyector - autor",
                 () -> assertNotNull(categoria.getIdCategoria())
 
+        );
+    }
+
+    @Test
+    public void categoriaValoresNegativos() {
+        categoria.setIdCategoria(-8);
+        assertAll("Validar datos Negativos",
+                () -> assertEquals(-8, categoria.getIdCategoria()),
+                () -> assertEquals(-8, categoria.getIdCategoria())
         );
     }
 }

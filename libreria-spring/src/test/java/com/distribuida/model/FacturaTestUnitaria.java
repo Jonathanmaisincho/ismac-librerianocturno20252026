@@ -50,7 +50,6 @@ public class FacturaTestUnitaria {
 
         cliente = new Cliente(1, "1754421483", "Juan", "Taipe", "Direccion1", "0991801937", "jtaipe@correo.com");
 
-
         factura.setIdFactura(2);
         factura.setNumFactura("FAC-0002");
         factura.setFecha(new Date());

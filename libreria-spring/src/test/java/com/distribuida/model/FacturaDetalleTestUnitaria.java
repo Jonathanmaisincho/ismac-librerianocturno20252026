@@ -21,7 +21,6 @@ public class FacturaDetalleTestUnitaria {
         factura = new Factura(1, "FAC-0001", new Date(), 100.100, 15.00, 15.00, 1);
         libro = new Libro(1,"La Sombra de los Vientos Eternos","Aurora",432,"1ª edición","Español","2023-09-15 00:00:00","Una novela fantástica que narra la aventura de un joven destinado a proteger un antiguo secreto","Tapa dura","978-1-23456-789-7",25,"portadas/sombra_vientos.jpg","Libro de lujo con sobrecubierta",349.99);
 
-
         facturaDetalle = new FacturaDetalle();
         facturaDetalle.setIdFacturaDetalle(2);
         facturaDetalle.setCantidad(4);
@@ -45,7 +44,6 @@ public class FacturaDetalleTestUnitaria {
 
         );
     }
-
 
     @Test
     public void facturaTestSetters() {
@@ -72,8 +70,6 @@ public class FacturaDetalleTestUnitaria {
         );
     }
 
-
-
     @Test
     public void facturadetalleTestToString() {
         String str = facturaDetalle.toString();
@@ -95,7 +91,6 @@ public class FacturaDetalleTestUnitaria {
 
         );
     }
-
 
     @Test
     public void facturadetalleValoresNegativos() {

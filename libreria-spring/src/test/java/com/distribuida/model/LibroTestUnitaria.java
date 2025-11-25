@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LibroTestUnitaria {
 
-
     private Libro libro;
     private Categoria categoria;
     private Autor autor;
@@ -61,10 +60,8 @@ public class LibroTestUnitaria {
                 () -> assertEquals("portadas/sombra_vientos.jpg", libro.getPortada()),
                 () -> assertEquals("Libro de lujo con sobrecubierta", libro.getPresentacion()),
                 () -> assertEquals(349.99, libro.getPrecio())
-
         );
     }
-
     @Test
     public void testLibroSetters() {
 
@@ -122,10 +119,8 @@ public class LibroTestUnitaria {
                 () -> assertTrue(str.contains("portadas/sombra_vientos.jpg")),
                 () -> assertTrue(str.contains("Libro de lujo con sobrecubierta")),
                 () -> assertTrue(str.contains("349.99"))
-
         );
     }
-
     @Test
     public void LibroTestInyector() {
         assertAll("Validar metodo inyector - Libro",
@@ -134,10 +129,8 @@ public class LibroTestUnitaria {
                 () -> assertNotNull(libro.getCategoria()),
                 () -> assertEquals("Libros que contienen elementos mágicos, mundos imaginarios o criaturas sobrenaturales", libro.getCategoria().getDescripcion())
 
-
         );
     }
-
     @Test
     public void setLibroValoresNegativos() {
         libro.setNumpaginas(-10);
