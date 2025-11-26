@@ -45,7 +45,7 @@ public class ClienteTestIntegracion {
     }
 @Test
     public void testClienteActualizar(){
-        Optional<Cliente> cliente = clienteRepository.findById(39);
+        Optional<Cliente> cliente = clienteRepository.findById(40);
 
 
         cliente.orElse(null).setCedula("175248588");
@@ -62,7 +62,7 @@ public class ClienteTestIntegracion {
 
 @Test
     public void testClienteBorrar(){
-        clienteRepository.deleteById(39);
+        clienteRepository.deleteById(40);
 }
 
 
