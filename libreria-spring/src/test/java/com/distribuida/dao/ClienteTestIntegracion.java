@@ -58,7 +58,7 @@ public class ClienteTestIntegracion {
 
         assertNotNull(clienteGuardado);
         assertEquals("1754421477",clienteGuardado.getCedula());
-        assertEquals("1754421477",clienteGuardado.getNombre());
+        assertEquals("Juan77",clienteGuardado.getNombre());
 
     }
 @Test
@@ -73,7 +73,11 @@ public class ClienteTestIntegracion {
     cliente.orElse(null).setTelefono("0991751988");
     cliente.orElse(null).setCorreo("jtaipe88@correo.com");
 
-    clienteRepository.save(cliente.orElse(null));
+   Cliente clienteActualizado =  clienteRepository.save(cliente.orElse(null));
+
+   assertNotNull(clienteActualizado);
+   assertEquals("Taipe88", clienteActualizado.getApellido());
+   assertEquals("Direccion88", clienteActualizado.getDireccion());
 
 
 }
