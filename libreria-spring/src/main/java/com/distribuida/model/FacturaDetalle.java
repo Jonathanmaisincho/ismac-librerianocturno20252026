@@ -1,18 +1,33 @@
 package com.distribuida.model;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "factura_detalle")
 public class FacturaDetalle {
 
-    private int idFacturaDetalle;
-    private int cantidad;
-    private Double subtotal;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_factura_detalle")
+    private int idFacturaDetalle;
+    @Column(name = "cantidad")
+    private int cantidad;
+    @Column(name = "subtotal")
+    private Double subtotal;
+    @ManyToOne
+    @JoinColumn (name = "id_factura")
+    private Factura factura;
+    @ManyToOne
+    @JoinColumn (name = "id_factura")
+    private Libro libro;
 
     public FacturaDetalle(){
 
 
     }
-    private Factura factura;
-    private Libro libro;
+
 
     public FacturaDetalle(int idFacturaDetalle, int cantidad, Double subtotal, Factura factura, Libro libro) {
         this.idFacturaDetalle = idFacturaDetalle;
