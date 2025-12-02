@@ -28,9 +28,9 @@ public class Libro {
     private String descripcion;
     @Column(name = "tipo_pasta")
     private String tipodepasta;
-    @Column(name = "ISBN")
+    @Column(name = "isbn")
     private String ISBN;
-    @Column(name = "Nnum_ejemplares")
+    @Column(name = "num_ejemplares")
     private int numejemplares;
     @Column(name = "portada")
     private String portada;

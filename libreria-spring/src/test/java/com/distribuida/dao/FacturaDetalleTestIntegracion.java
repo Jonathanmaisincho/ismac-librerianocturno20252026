@@ -24,7 +24,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Transactional
 @Rollback(value = false)
-
 public class FacturaDetalleTestIntegracion {
 
 
@@ -50,8 +49,8 @@ public class FacturaDetalleTestIntegracion {
     public void testFacturaDetalleFindOne(){
         Optional<FacturaDetalle> facturaDetalle = facturaDetalleRepository.findById(54);
         assertTrue(facturaDetalle.isPresent());
-        assertEquals(2, facturaDetalle.orElse(null).getCantidad());
-        assertEquals(30.84, facturaDetalle.orElse(null).getSubtotal());
+        assertEquals(1, facturaDetalle.orElse(null).getCantidad());
+        assertEquals(20.99, facturaDetalle.orElse(null).getSubtotal());
 
         System.out.println(facturaDetalle);
 

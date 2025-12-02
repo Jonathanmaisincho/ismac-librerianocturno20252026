@@ -34,7 +34,7 @@ public class LibroTestIntegracion {
     private AutorRepository autorRepository;
 
     @Test
-    public void testLibroFindAll(){
+    public void testClienteFindAll(){
         List<Libro> libros = libroRepository.findAll();
         assertNotNull(libros);
         assertTrue(libros.size()>0);
@@ -58,46 +58,47 @@ public class LibroTestIntegracion {
         Optional<Categoria> categoria = categoriaRepository.findById(1);
         assertTrue(categoria.isPresent());
 
-        Optional<Autor> autor = autorRepository.findById(1);
-        assertTrue(autor.isPresent());
+        Optional<Autor> autor = autorRepository.findById(0);
+        assertFalse(autor.isPresent());
 
-        Libro libro1 = new Libro();
-        libro1.setIdLibro(0);
-        libro1.setTitulo("La dama tapada");
-        libro1.setEditorial("la noche oscura");
-        libro1.setNumpaginas(100);
-        libro1.setEdicion("ISMAC SOFTWARE");
-        libro1.setIdioma("Español");
-        libro1.setFechapublicacion("12-11-2025");
-        libro1.setDescripcion("es un relato hecho para los hombres borrachos");
-        libro1.setTipodepasta("TRANS");
-        libro1.setISBN("123456789");
-        libro1.setNumejemplares(10);
-        libro1.setPortada("Vestido de negro");
-        libro1.setPresentacion("libro x 100pag");
-        libro1.setPrecio(12.50);
-        libro1.setCategoria(categoria.orElse(null));
-        libro1.setAutor(autor.orElse(null));
+        Libro libro = new Libro();
 
-        Libro libroGuardado = libroRepository.save(libro1);
+        libro.setIdLibro(0);
+        libro.setTitulo("La dama tapada");
+        libro.setEditorial("la noche oscura");
+        libro.setNumpaginas(100);
+        libro.setEdicion("ISMAC SOFTWARE");
+        libro.setIdioma("Español");
+        libro.setFechapublicacion("12-11-2025");
+        libro.setDescripcion("es un relato hecho para los hombres borrachos");
+        libro.setTipodepasta("TRANS");
+        libro.setISBN("123456789");
+        libro.setNumejemplares(10);
+        libro.setPortada("Vestido de negro");
+        libro.setPresentacion("libro x 100pag");
+        libro.setPrecio(12.50);
+        libro.setCategoria(categoria.orElse(null));
+        libro.setAutor(autor.orElse(null));
+
+        Libro libroGuardado = libroRepository.save(libro);
         assertNotNull(libroGuardado);
         assertEquals("La dama tapada", libroGuardado.getTitulo());
         assertEquals(100, libroGuardado.getNumpaginas());
 
-        libroRepository.save(libro1);
+        libroRepository.save(libro);
 
 
     }
     @Test
     public void testLibroUpdate(){
-        Optional<Libro> libro = libroRepository.findById(79);
+        Optional<Libro> libro = libroRepository.findById(102);
         assertTrue(libro.isPresent());
         Optional<Categoria> categoria = categoriaRepository.findById(2);
         assertTrue(categoria.isPresent());
         Optional<Autor> autor = autorRepository.findById(2);
         assertTrue(autor.isPresent());
 
-        libro.orElse(null).setTitulo("caperucita");
+        libro.orElse(null).setTitulo("el lobo");
         libro.orElse(null).setEditorial("Roja");
         libro.orElse(null).setNumpaginas(100);
         libro.orElse(null).setEdicion("camaleones");

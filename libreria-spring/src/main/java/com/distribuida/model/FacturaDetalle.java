@@ -20,7 +20,7 @@ public class FacturaDetalle {
     @JoinColumn (name = "id_factura")
     private Factura factura;
     @ManyToOne
-    @JoinColumn (name = "id_factura")
+    @JoinColumn (name = "id_libro")
     private Libro libro;
 
     public FacturaDetalle(){

@@ -46,7 +46,7 @@ public class AutorTestIntegacion {
 
     @Test
     public void testAutorActualizar(){
-        Optional<Autor> autor = autorRepository.findById(54);
+        Optional<Autor> autor = autorRepository.findById(59);
 
 
 
