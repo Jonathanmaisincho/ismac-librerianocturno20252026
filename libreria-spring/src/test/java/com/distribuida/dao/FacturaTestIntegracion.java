@@ -76,7 +76,7 @@ public class FacturaTestIntegracion {
 
     assertTrue(cliente.isPresent());
 
-    Optional<Factura> factura = facturaRepository.findById(87);
+    Optional<Factura> factura = facturaRepository.findById(86);
 
     assertTrue(factura.isPresent());
 
@@ -98,10 +98,10 @@ public class FacturaTestIntegracion {
 
     @Test
     public void testFacturaDelete() {
-    if (facturaRepository.existsById(87)) {
-        facturaRepository.deleteById(87);
+    if (facturaRepository.existsById(86)) {
+        facturaRepository.deleteById(86);
     }
-     assertFalse(facturaRepository.existsById(87));
+     assertFalse(facturaRepository.existsById(86));
 
     }
 

@@ -82,7 +82,7 @@ public class FacturaDetalleTestIntegracion {
         assertTrue(factura.isPresent());
         Optional<Libro> libro = libroRepository.findById(3);
         assertTrue(libro.isPresent());
-        Optional<FacturaDetalle> facturaDetalle = facturaDetalleRepository.findById(25);
+        Optional<FacturaDetalle> facturaDetalle = facturaDetalleRepository.findById(211);
         assertTrue(facturaDetalle.isPresent());
 
         facturaDetalle.orElse(null).setCantidad(40);
@@ -101,10 +101,10 @@ public class FacturaDetalleTestIntegracion {
 
     @Test
     public void testFacturaDetalleDelete(){
-        facturaDetalleRepository.deleteById(210);{
-            facturaDetalleRepository.deleteById(210);
+        facturaDetalleRepository.deleteById(213);{
+            facturaDetalleRepository.deleteById(213);
         }
-        assertFalse(facturaDetalleRepository.existsById(210));
+        assertFalse(facturaDetalleRepository.existsById(213));
     }
 
 

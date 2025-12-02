@@ -91,7 +91,7 @@ public class LibroTestIntegracion {
     }
     @Test
     public void testLibroUpdate(){
-        Optional<Libro> libro = libroRepository.findById(102);
+        Optional<Libro> libro = libroRepository.findById(152);
         assertTrue(libro.isPresent());
         Optional<Categoria> categoria = categoriaRepository.findById(2);
         assertTrue(categoria.isPresent());
@@ -127,10 +127,10 @@ public class LibroTestIntegracion {
     }
     @Test
     public void testLibroDelete(){
-        libroRepository.deleteById(79);{
-            libroRepository.deleteById(79);
+        libroRepository.deleteById(152);{
+            libroRepository.deleteById(152);
         }
-        assertFalse(libroRepository.existsById(79));
+        assertFalse(libroRepository.existsById(152));
     }
 
 
