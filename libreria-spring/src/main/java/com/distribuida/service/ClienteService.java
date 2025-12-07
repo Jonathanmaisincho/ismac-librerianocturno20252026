@@ -14,6 +14,8 @@ public interface ClienteService {
 
     public Cliente update (Cliente cliente);
 
+    Cliente update(int id, Cliente cliente);
+
     public void delete(int id);
 
 }
