@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig {
 
 
-    // comentarios para git hub
+    // comentarios para git
     @Bean
     public WebMvcConfigurer corsCongurer() {
         return new WebMvcConfigurer() {
