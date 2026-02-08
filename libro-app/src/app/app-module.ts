@@ -17,13 +17,16 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
 import { CategoriaComponent } from './components/categoria/categoria';
 import { AutorComponent } from './components/autor/autor';
+import { LibroComponent } from './components/libro/libro';
+import { MatDialogModule } from '@angular/material/dialog'
 
 @NgModule({
   declarations: [
     App,
     ClienteComponent,
     CategoriaComponent,
-    AutorComponent
+    AutorComponent,
+    LibroComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { AutorComponent } from './components/autor/autor';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
