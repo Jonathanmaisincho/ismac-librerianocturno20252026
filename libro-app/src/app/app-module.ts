@@ -7,7 +7,7 @@ import { ClienteComponent } from './components/cliente/cliente';
 import {MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule } from '@angular/material/sort';
-import { MatFormField } from "@angular/material/select";
+import { MatFormField, MatSelectModule } from "@angular/material/select";
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,7 +18,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { CategoriaComponent } from './components/categoria/categoria';
 import { AutorComponent } from './components/autor/autor';
 import { LibroComponent } from './components/libro/libro';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -42,10 +44,16 @@ import { MatDialogModule } from '@angular/material/dialog'
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    MatDatepickerModule
+
   ],
   bootstrap: [App]
 })
