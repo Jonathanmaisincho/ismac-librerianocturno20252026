@@ -21,6 +21,10 @@ import { NgForm } from '@angular/forms';
   styleUrl: './libro.css',
 })
 export class LibroComponent  implements OnInit {
+imagenAnterior: any;
+onSeleccionarArchivo($event: Event) {
+throw new Error('Method not implemented.');
+}
 
 libros: Libro[] = [];
 autores: Autor[] = []
