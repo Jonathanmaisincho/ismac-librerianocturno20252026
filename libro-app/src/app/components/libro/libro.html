@@ -102,7 +102,7 @@
                     <div class="col-md-12 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Titulo</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.titulo" name="titulo" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.titulo" name="titulo" required/>
 
                         </mat-form-field>
                     </div>
@@ -110,7 +110,7 @@
                     <div class="col-md-12 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Descripción</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.descripcion" name="descripcion" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.descripcion" name="descripcion" required/>
 
                         </mat-form-field>
                     </div>
@@ -118,7 +118,7 @@
                     <div class="col-md-4 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Editorial</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.editorial" name="editorial" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.editorial" name="editorial" required/>
 
                         </mat-form-field>
                     </div>
@@ -126,7 +126,7 @@
                     <div class="col-md-4 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Idioma</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.idioma" name="idioma" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.idioma" name="idioma" required/>
 
                         </mat-form-field>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="col-md-4 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Fecha de Publicacion</mat-label>
-                            <input matInput [matDatepicker]="picker" [(ngModel)]="libro.fechaPublicacion" name="fechaPublicacion" required=/>
+                            <input matInput [matDatepicker]="picker" [(ngModel)]="libro.fechapublicacion" name="fechaPublicacion" required/>
                             <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
 
@@ -144,7 +144,7 @@
                     <div class="col-md-3 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Número de Páginas</mat-label>
-                            <input matInput type="number" [(ngModel)]="libro.numPaginas" name="numPaginas" required=/>
+                            <input matInput type="number" [(ngModel)]="libro.numpaginas" name="numpaginas" required/>
 
                         </mat-form-field>
                     </div>
@@ -152,7 +152,7 @@
                     <div class="col-md-3 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Edición</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.edicion" name="edicion" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.edicion" name="edicion" required/>
 
                         </mat-form-field>
                     </div>
@@ -160,7 +160,7 @@
                     <div class="col-md-3 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Tipo Pasta</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.tipoPasta" name="tipoPasta" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.tipodepasta" name="tipodepasta" required/>
 
                         </mat-form-field>
                     </div>
@@ -168,7 +168,7 @@
                       <div class="col-md-3 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>N° de Ejemplares</mat-label>
-                            <input matInput type="number" [(ngModel)]="libro.numEjemplares" name="numEjemplares" required=/>
+                            <input matInput type="number" [(ngModel)]="libro.numejemplares" name="numejemplares" required/>
 
                         </mat-form-field>
                     </div>
@@ -176,7 +176,7 @@
                       <div class="col-md-4 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>ISBN</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.iSBN" name="iSBN" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.isbn" name="ISBN" required/>
 
                         </mat-form-field>
                     </div>
@@ -184,7 +184,7 @@
                       <div class="col-md-4 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Presentación</mat-label>
-                            <input matInput type="text" [(ngModel)]="libro.presentacion" name="presentacion" required=/>
+                            <input matInput type="text" [(ngModel)]="libro.presentacion" name="presentacion" required/>
 
                         </mat-form-field>
                     </div>
@@ -192,7 +192,7 @@
                     <div class="col-md-4 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Precio</mat-label>
-                            <input matInput type="number" [(ngModel)]="libro.precio" name="precio" required=/>
+                            <input matInput type="number" [(ngModel)]="libro.precio" name="precio" required/>
 
                         </mat-form-field>
                     </div>
@@ -200,7 +200,7 @@
                     <div class="col-md-6 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Autor</mat-label>
-                            <mat-select [ngModel]="libro.autor" name="autor" required [compareWith]="compareAutores">
+                            <mat-select [(ngModel)]="libro.autor" name="autor" required [compareWith]="compareAutores">
                                 <mat-option *ngFor="let a of autores" [value]="a">{{ nombreCompletoAutor(a)}}</mat-option>
 
                             </mat-select>
@@ -210,7 +210,7 @@
                     <div class="col-md-6 mb-2">
                         <mat-form-field appearance="outline" class="w-100">
                             <mat-label>Categoria</mat-label>
-                            <mat-select [ngModel]="libro.categoria" name="categoria" required [compareWith]="compareCategorias">
+                            <mat-select [(ngModel)]="libro.categoria" name="categoria" required [compareWith]="compareCategorias">
                                 <mat-option *ngFor="let c of categorias" [value]="c">{{ c.categoria}}</mat-option>
 
                             </mat-select>
@@ -219,21 +219,20 @@
 
                     <div class="col-md-12 mb-2">
                         <div class="custom-file-upload">
-                            <input #fileInput type="file" (change)="onSeleccionarArchivo($event)" hidden>
-                            <button mat-raised-button color="primary" (click)="fileInput.click()" style="margin-right: 10 px;">
+                            <input #fileInput type="file" (change)="onFileSelected($event)" hidden>
+                            <button mat-raised-button color="primary" (click)="fileInput.click()" style="margin-right: 10px;">
                                 Seleccionar Imagen
                             </button>
                             <span *ngIf="seleccionarArchivo">{{ seleccionarArchivo.name}}</span>
                             <button mat-raised-button color="primary" (click)="subirImagen()">Subir Imagen</button>
                         </div>
 
-                        <div class="imagen-container" *ngIf="libro.portada || imagenAnterior">
+                        <div class="imagen-container" *ngIf="libro.portada || imagenPrevia">
                             <img 
-                            [src]=" 'http://localhost:8080/' + (imagenAnterior || libro.portada)" 
+                            [src]="'http://localhost:8080/' + (imagenPrevia || libro.portada)" 
                             alt="Portada de Libro"
                             class="imagen-portada"
                             />
-
                         </div>
                     </div>    
                 </div>
@@ -253,7 +252,7 @@
         <mat-dialog-content>
             <div *ngIf="libroSeleccionado?.portada">
                 <img
-                src=" 'http://localhost:8080' + libroSeleccionado?.portada"  
+                [src]="'http://localhost:8080' + libroSeleccionado?.portada"  
                 alt="Portada de Libro"
                 style="width: 400px; margin-top: 1rem;"
                 />
@@ -261,18 +260,22 @@
 
             <p><strong>Titulo:</strong>{{ libroSeleccionado?.titulo}}</p>
             <p><strong>Editorial:</strong>{{ libroSeleccionado?.editorial}}</p>
+            <p><strong>Edición:</strong>{{ libroSeleccionado?.edicion}}</p>
             <p><strong>Idioma:</strong>{{ libroSeleccionado?.idioma}}</p>
-            <p><strong>Fecha de Publicación:</strong>{{ libroSeleccionado?.fechaPublicacion | date}}</p>
+            <p><strong>N° de páginas:</strong>{{ libroSeleccionado?.numpaginas}}</p>
+            <p><strong>Fecha de Publicación:</strong>{{ libroSeleccionado?.fechapublicacion | date}}</p>
             <p><strong>Descripción:</strong>{{ libroSeleccionado?.descripcion}}</p>
-            <p><strong>tipo de Pasta:</strong>{{ libroSeleccionado?.tipoPasta}}</p>
-            <p><strong>ISBN:</strong>{{ libroSeleccionado?.iSBN}}</p>
+            <p><strong>tipo de Pasta:</strong>{{ libroSeleccionado?.tipodepasta}}</p>
+            <p><strong>ISBN:</strong>{{ libroSeleccionado?.isbn}}</p>
+            <p><strong>N° de Ejemplares:</strong>{{ libroSeleccionado?.numejemplares}}</p>
             <p><strong>Presentación:</strong>{{ libroSeleccionado?.presentacion}}</p>
             <p><strong>Precio:</strong>{{ libroSeleccionado?.precio | currency}}</p>
             <p><strong>Autor:</strong>{{ libroSeleccionado?.autor?.nombre}} {{ libroSeleccionado?.autor?.apellido}}</p>
             <p><strong>Categoria:</strong>{{ libroSeleccionado?.categoria?.categoria}}</p>
+
         </mat-dialog-content>
         <mat-dialog-actions align="end">
-            <button mat-button (click)="cerrarModel()">Cerrar</button>
+            <button mat-button (click)="cerrarModal()">Cerrar</button>
 
         </mat-dialog-actions>
     </ng-template>

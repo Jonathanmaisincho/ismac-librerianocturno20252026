@@ -21,10 +21,6 @@ import { NgForm } from '@angular/forms';
   styleUrl: './libro.css',
 })
 export class LibroComponent  implements OnInit {
-imagenAnterior: any;
-onSeleccionarArchivo($event: Event) {
-throw new Error('Method not implemented.');
-}
 
 libros: Libro[] = [];
 autores: Autor[] = []
@@ -193,6 +189,7 @@ mostrarColumnas: String[] = ['detalles','idLibro', 'titulo','editorial','edicion
 
   onFileSelected(event: any){
     this.seleccionarArchivo = event.target.files[0];
+    
 
   }
 
@@ -201,10 +198,10 @@ mostrarColumnas: String[] = ['detalles','idLibro', 'titulo','editorial','edicion
     formData.append("file", this.seleccionarArchivo);
 
     if(this.libro.portada){
-      formData.append("oldImage", this.libro.portada);
+      formData.append("oldImagen", this.libro.portada);
     }
 
-    this.http.post<{ ruta: string }>('http://localhost:8080/api/upload-portada', formData).subscribe(res => { 
+    this.http.post<{ ruta: string }>('http://localhost:8080/api/upload-portada', formData).subscribe(res =>{ 
       this.libro.portada = res.ruta;
       this.imagenPrevia = res.ruta;
      });
@@ -213,12 +210,12 @@ mostrarColumnas: String[] = ['detalles','idLibro', 'titulo','editorial','edicion
 
   abrirModalDetalles(libro: Libro): void{
     this.libroSeleccionado = libro;
-    this.dialog.open(this.modalDetalles, {
-      width: '500px'
-    });  
+    this.dialog.open(this.modalDetalles, 
+      {width: '500px'}
+    );  
   }
 
-  cerrarModel(): void{
+  cerrarModal(): void{
     this.dialog.closeAll();
     this.libroSeleccionado = null;
   }
